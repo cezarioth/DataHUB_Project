@@ -88,7 +88,7 @@ A pagina precisa estar acessivel publicamente. Bloqueios, alteracoes de layout, 
 ```text
 DataHUB_Project/
 |-- assets/                              Icones da interface
-|-- backend/                             Modulos de consulta, extracao e texto
+|-- backend/                             Servicos de negocio sem dependencia da UI
 |   |-- anatel.py                        Consulta da base ANATEL
 |   |-- cadastro.py                      Apoio ao fluxo de cadastro
 |   |-- config.py                        Configuracoes compartilhadas
@@ -98,16 +98,20 @@ DataHUB_Project/
 |   |-- images.py                        Coleta e tratamento de imagens
 |   `-- text_utils.py                    Utilitarios de texto
 |-- dados_anatel/                        Bases locais da ANATEL
-|-- frontend/                            Componentes reutilizaveis da interface
-|   `-- views/status_bar.py               Barra de status da aplicacao
+|-- frontend/                            Interface desktop
+|   |-- main_window.py                    Janela principal e fluxos da UI
+|   `-- views/status_bar.py               Barra de status reutilizavel
 |-- datahub.spec                         Configuracao principal de empacotamento
 |-- datahub_extractor.spec               Configuracao alternativa de empacotamento
 |-- executar_datahub.bat                 Launcher para Windows
 |-- requirements.txt                     Dependencias Python
-`-- datahub.py                           Aplicacao principal
+`-- datahub.py                           Ponto de entrada da aplicacao
 ```
 
 Os diretorios `build/`, `dist/` e `__pycache__/` sao artefatos locais e ficam fora do versionamento por configuracao do `.gitignore`.
+
+A regra de dependencias e: `frontend` pode consumir `backend`, mas `backend`
+nao deve importar janelas, widgets ou o ponto de entrada `datahub.py`.
 
 ## Dependencias principais
 
