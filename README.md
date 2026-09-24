@@ -1,8 +1,7 @@
-# DataHUB / PRODEXA
-
+# DataHUB
 > Ferramenta para acelerar o cadastro de produtos a partir de paginas da Decathlon.
 
-O DataHUB, tambem chamado de PRODEXA, centraliza em uma interface desktop as tarefas repetitivas do cadastro de produtos: coleta de imagens, extracao e organizacao de informacoes, consulta de homologacao ANATEL e apoio de inteligencia artificial na preparacao da descricao.
+O DataHUB centraliza em uma interface desktop as tarefas repetitivas do cadastro de produtos: coleta de imagens, extracao e organizacao de informacoes, consulta de homologacao ANATEL e apoio de inteligencia artificial na preparacao da descricao.
 
 > **Status:** projeto em evolucao. O fluxo atual foi desenvolvido para paginas da Decathlon Brasil e pode precisar de ajustes quando o site mudar.
 
@@ -167,6 +166,3 @@ Confira se a chave foi informada na aba de IA, se ela esta valida e se a conta p
 - O projeto ignora artefatos de build, caches Python e arquivos `*.pem` por padrao.
 - O uso de dados e servicos externos deve respeitar os termos aplicaveis e as politicas dos respectivos provedores.
 
-## Licenca
-
-Este repositorio ainda nao declara uma licenca de distribuicao. Defina uma licenca antes de publicar ou redistribuir o projeto fora da equipe.
