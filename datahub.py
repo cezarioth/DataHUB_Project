@@ -40,6 +40,7 @@ import webbrowser
 import tkinter as tk
 import customtkinter as ctk
 import urllib.parse
+from frontend import StatusBar
 from io import BytesIO
 from pathlib import Path
 from tkinter import filedialog, messagebox, scrolledtext, ttk
@@ -4280,14 +4281,9 @@ class App(ctk.CTk):
         self._montar_view_sobre(self.views[8])
 
         # STATUS BAR FOOTER
-        status_card = ctk.CTkFrame(self.main_container, corner_radius=8, height=32)
-        status_card.grid(row=2, column=0, sticky="ew", pady=(10, 0))
-
-        self.status_label = ctk.CTkLabel(
-            status_card, textvariable=self.status, font=("Segoe UI", 11, "bold"),
-            anchor="w"
-        )
-        self.status_label.pack(side="left", padx=12, pady=6)
+        self.status_bar = StatusBar(self.main_container, self.status)
+        self.status_bar.grid(row=2, column=0, sticky="ew", pady=(10, 0))
+        self.status_label = self.status_bar.label
 
         self._selecionar_view(0)
 

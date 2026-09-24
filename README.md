@@ -98,7 +98,8 @@ DataHUB_Project/
 |   |-- images.py                        Coleta e tratamento de imagens
 |   `-- text_utils.py                    Utilitarios de texto
 |-- dados_anatel/                        Bases locais da ANATEL
-|-- frontend/                            Pacote reservado para a camada visual
+|-- frontend/                            Componentes reutilizaveis da interface
+|   `-- views/status_bar.py               Barra de status da aplicacao
 |-- datahub.spec                         Configuracao principal de empacotamento
 |-- datahub_extractor.spec               Configuracao alternativa de empacotamento
 |-- executar_datahub.bat                 Launcher para Windows
