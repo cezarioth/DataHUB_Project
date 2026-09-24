@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['extrator_decathlon_v36_4_filtro3 (1).py'],
+    ['datahub.py'],
     pathex=[],
     binaries=[],
     datas=[('assets', 'assets'), ('intro.mp4', '.'), ('icone_app.ico', '.')],
@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='extrator_decathlon_v36_4_filtro3 (1)',
+    name='datahub_extractor',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

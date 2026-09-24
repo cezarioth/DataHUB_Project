@@ -48,10 +48,10 @@ Se o PowerShell bloquear a ativacao do ambiente, execute a instalacao usando dir
 Com o ambiente virtual ativado:
 
 ```powershell
-python "extrator_decathlon_v36_4_filtro3 (1).py"
+python datahub.py
 ```
 
-Tambem e possivel executar `Executar_PRODEXA.bat`. Esse arquivo instala as dependencias com o launcher `py` e inicia a interface automaticamente. A primeira execucao pode demorar enquanto os pacotes sao instalados.
+Tambem e possivel executar `executar_datahub.bat`. Esse arquivo instala as dependencias com o launcher `py` e inicia a interface automaticamente. A primeira execucao pode demorar enquanto os pacotes sao instalados.
 
 ## Configuracao da base ANATEL
 
@@ -99,10 +99,11 @@ DataHUB_Project/
 |   `-- text_utils.py                    Utilitarios de texto
 |-- dados_anatel/                        Bases locais da ANATEL
 |-- frontend/                            Pacote reservado para a camada visual
-|-- DataHub.spec                         Configuracao de empacotamento
-|-- Executar_PRODEXA.bat                 Launcher para Windows
+|-- datahub.spec                         Configuracao principal de empacotamento
+|-- datahub_extractor.spec               Configuracao alternativa de empacotamento
+|-- executar_datahub.bat                 Launcher para Windows
 |-- requirements.txt                     Dependencias Python
-`-- extrator_decathlon_v36_4_filtro3 (1).py  Aplicacao principal
+`-- datahub.py                           Aplicacao principal
 ```
 
 Os diretorios `build/`, `dist/` e `__pycache__/` sao artefatos locais e ficam fora do versionamento por configuracao do `.gitignore`.
@@ -124,7 +125,7 @@ Instale sempre pelo arquivo de requisitos para manter o ambiente reproduzivel.
 Para verificar a sintaxe dos modulos Python:
 
 ```powershell
-python -m compileall -q backend "extrator_decathlon_v36_4_filtro3 (1).py"
+python -m compileall -q backend datahub.py
 ```
 
 Para visualizar as alteracoes locais:
@@ -134,7 +135,7 @@ git status
 git diff
 ```
 
-O arquivo `DataHub.spec` pode ser usado como ponto de partida para gerar uma distribuicao empacotada com PyInstaller, desde que essa ferramenta esteja instalada no ambiente.
+Os arquivos `datahub.spec` e `datahub_extractor.spec` podem ser usados como ponto de partida para gerar uma distribuicao empacotada com PyInstaller, desde que essa ferramenta esteja instalada no ambiente.
 
 ## Solucao de problemas
 

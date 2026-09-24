@@ -7,5 +7,5 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-py "extrator_decathlon_v36_4_filtro3 (1).py"
+py datahub.py
 if errorlevel 1 pause
