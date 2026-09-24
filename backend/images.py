@@ -49,7 +49,7 @@ RE_JSONLD = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 RE_NEXT_DATA_ABERTURA = re.compile(
-    r'<script[^>]+id=["\'']__NEXT_DATA__["\''][^>]*>',
+    r'''<script[^>]+id=["']__NEXT_DATA__["'][^>]*>''',
     re.IGNORECASE,
 )
 RE_MARCADORES_ESTADO = re.compile(
