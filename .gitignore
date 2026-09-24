@@ -1,0 +1,21 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Build and packaged application output
+build/
+dist/
+*.spec.bak
+
+# Local secrets and generated configuration
+*.pem
+.env
+.env.*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
