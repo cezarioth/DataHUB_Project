@@ -40,6 +40,9 @@ REGRAS OBRIGATÓRIAS:
 IA_PRESETS = {
     "Template Decathlon - Estrutura Automática": """INSTRUÇÃO PERMANENTE
 
+
+if "Formatar cadastro Decathlon" in IA_PRESETS:
+    IA_PRESETS["Padrão Decathlon"] = IA_PRESETS["Formatar cadastro Decathlon"]
 Sempre que eu enviar um conteúdo de produto, você deverá interpretar automaticamente os blocos fornecidos e reorganizar em formato final de descrição, seguindo exatamente a estrutura abaixo, sem adicionar ou remover seções.
 
 REGRAS OBRIGATÓRIAS
